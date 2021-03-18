@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+		<script src="js/vue.js" type="text/javascript" charset="utf-8"></script>
+		<style>
+			.outer{
+				width: 500px;
+				height: 500px;
+				background-color: red;
+			}
+			.inner{
+				width: 300px;
+				height: 300px;
+				background-color: yellow;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="outer" onclick="outer()">
+			<div class="inner" onclick="inner()">
+				<input type="button" value="button" onclick="btn(event)">
+			</div>
+		</div>
+	</body>
+	<script>
+		function outer(){
+			console.log("outer");
+		}
+		function inner(){
+			console.log("inner");
+		}
+		function btn(){
+			console.log("btn");
+			e.stopPropagation();
+		}
+	</script>
+</html>
